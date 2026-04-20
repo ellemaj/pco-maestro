@@ -3,7 +3,7 @@
 namespace App;
 
 use App\Controllers\HomeController;
-use App\Controllers\TaskController;
+use App\Controllers\BlogController;
 use Framework\Router;
 use Framework\RouteProviderInterface;
 use Framework\ServiceContainer;
@@ -19,5 +19,13 @@ class RouteProvider implements RouteProviderInterface
         $homeController = $container->get(HomeController::class);
         $router->addRoute('GET', '/', [$homeController, "index"]);
         $router->addRoute('GET', '/profile', [$homeController, "profile"]);
+        $router->addRoute('GET', '/dashboard', [$homeController, "dashboard"]);
+        $router->addRoute('GET', '/faq', [$homeController, "faq"]);
+        
+        $router->addRoute('GET', '/sitemap', [$homeController, "sitemap"]);
+        $router->addRoute('GET', '/commandmaker', [$homeController, "commandmaker"]);
+
+        $blogController = $container->get(BlogController::class);
+        $router->addRoute('GET', '/blog', [$blogController, "index"]);
     }
 }

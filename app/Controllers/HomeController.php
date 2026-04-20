@@ -30,4 +30,36 @@ class HomeController
     {
         return $this->responseFactory->view('profile.html.twig');
     }
+
+    /**
+     * @throws Exception
+     */
+    public function dashboard(): Response
+    {
+        return $this->responseFactory->view('dashboard.html.twig');
+    }
+
+    /**
+     * @throws Exception
+     */
+    public function faq(): Response
+    {
+        return $this->responseFactory->view('faq.html.twig');
+    }
+
+    /**
+     * @throws Exception
+     */
+    public function sitemap(): Response
+    {
+        return $this->responseFactory->view('sitemap.html.twig');
+    }
+
+    /**
+     * @throws Exception
+     */
+    public function commandmaker(): Response
+    {
+        return $this->responseFactory->view('commandmaker.html.twig');
+    }
 }
