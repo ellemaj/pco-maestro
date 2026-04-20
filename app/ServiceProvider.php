@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Controllers\HomeController;
+use App\Controllers\BlogController;
 use Exception;
 use Framework\Database;
 use Framework\ResponseFactory;
@@ -22,5 +23,8 @@ class ServiceProvider implements ServiceProviderInterface
 
         $homeController = new HomeController($responseFactory);
         $container->set(HomeController::class, $homeController);
+
+        $blogController = new BlogController($responseFactory);
+        $container->set(BlogController::class, $blogController);
     }
 }
