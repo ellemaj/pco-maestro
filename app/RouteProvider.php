@@ -18,6 +18,6 @@ class RouteProvider implements RouteProviderInterface
     {
         $homeController = $container->get(HomeController::class);
         $router->addRoute('GET', '/', [$homeController, "index"]);
-        $router->addRoute('GET', '/about', [$homeController, "about"]);
+        $router->addRoute('GET', '/profile', [$homeController, "profile"]);
     }
 }

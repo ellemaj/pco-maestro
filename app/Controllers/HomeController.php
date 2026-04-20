@@ -26,8 +26,8 @@ class HomeController
     /**
      * @throws Exception
      */
-    public function about(): Response
+    public function profile(): Response
     {
-        return $this->responseFactory->view('about.html.twig');
+        return $this->responseFactory->view('profile.html.twig');
     }
 }
