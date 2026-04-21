@@ -20,7 +20,9 @@ class HomeController
      */
     public function index(): Response
     {
-        return $this->responseFactory->view('index.html.twig');
+        return $this->responseFactory->view('index.html.twig', [
+            'active' => 'home'
+        ]);
     }
 
     /**
@@ -28,7 +30,9 @@ class HomeController
      */
     public function profile(): Response
     {
-        return $this->responseFactory->view('profile.html.twig');
+        return $this->responseFactory->view('profile.html.twig', [
+            'active' => 'profile'
+        ]);
     }
 
     /**
@@ -36,7 +40,9 @@ class HomeController
      */
     public function dashboard(): Response
     {
-        return $this->responseFactory->view('dashboard.html.twig');
+        return $this->responseFactory->view('dashboard.html.twig', [
+            'active' => 'dashboard'
+        ]);
     }
 
     /**
@@ -44,7 +50,9 @@ class HomeController
      */
     public function faq(): Response
     {
-        return $this->responseFactory->view('faq.html.twig');
+        return $this->responseFactory->view('faq.html.twig', [
+            'active' => 'faq'
+        ]);
     }
 
     /**
@@ -52,7 +60,9 @@ class HomeController
      */
     public function sitemap(): Response
     {
-        return $this->responseFactory->view('sitemap.html.twig');
+        return $this->responseFactory->view('sitemap.html.twig', [
+            'active' => 'sitemap'
+        ]);
     }
 
     /**
@@ -60,6 +70,8 @@ class HomeController
      */
     public function commandmaker(): Response
     {
-        return $this->responseFactory->view('commandmaker.html.twig');
+        return $this->responseFactory->view('commandmaker.html.twig', [
+            'active' => 'commandmaker'
+        ]);
     }
 }

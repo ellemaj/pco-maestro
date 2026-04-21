@@ -23,11 +23,11 @@
 
     <nav class="menu">
         <ul>
-            <li><a href="/" class="active">Home</a></li>
-            <li><a href="/profile">Profile</a></li>
-            <li><a href="/dashboard">Dashboard</a></li>
-            <li><a href="/faq">FAQ</a></li>
-            <li><a href="/blog">Blog</a></li>
+            <li><a href="/" class="{% if active == 'home' %}active{% endif %}">Home</a></li>
+            <li><a href="/profile" class="{% if active == 'profile' %}active{% endif %}">Profile</a></li>
+            <li><a href="/dashboard" class="{% if active == 'dashboard' %}active{% endif %}">Dashboard</a></li>
+            <li><a href="/faq" class="{% if active == 'faq' %}active{% endif %}">FAQ</a></li>
+            <li><a href="/blog" class="{% if active == 'blog' %}active{% endif %}">Blog</a></li>
         </ul>
     </nav>
 
@@ -37,13 +37,11 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white dark:bg-[#161b22] border-t border-slate-200 dark:border-[#30363d]">
-        <div class="max-w-6xl mx-auto px-6 py-4 text-center text-sm text-slate-500 dark:text-[#8b949e]">
-            © {{ "now"|date("Y") }} ellemaj |
-            <a href="mailto:loen0029@hz.nl">Contact</a> |
-            <a href="sitemap">Sitemap</a> |
-            <a href="commandmaker">Commandmaker</a>
-        </div>
+    <footer>
+        <a href="/">© {{ "now"|date("Y") }} ellemaj</a> |
+        <a href="mailto:loen0029@hz.nl">Contact</a> |
+        <a href="sitemap" class="{% if active == 'sitemap' %}active{% endif %}">Sitemap</a> |
+        <a href="commandmaker" class="{% if active == 'commandmaker' %}active{% endif %}">Commandmaker</a>
     </footer>
 </body>
 </html>

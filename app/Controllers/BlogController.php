@@ -20,6 +20,8 @@ class BlogController
      */
     public function index(): Response
     {
-        return $this->responseFactory->view('blog/index.html.twig');
+        return $this->responseFactory->view('blog/index.html.twig', [
+            'active' => 'blog'
+        ]);
     }
 }
